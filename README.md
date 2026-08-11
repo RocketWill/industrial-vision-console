@@ -66,13 +66,15 @@ The Vite development proxy forwards `/api` and `/data` to the wafer-runtime serv
 
 ## Verification
 
-The public-preparation snapshot currently passes the TypeScript and production bundle build:
+The curated snapshot currently passes the TypeScript and production bundle build:
 
 ```bash
 npm run build
 ```
 
-`npm run lint` still reports findings in several editor and configuration components. The AppLayout hook order, LiveKit token lifecycle, and viewer resource cleanup have been corrected, while the remaining findings are recorded as later quality-hardening work. No automatic `npm audit fix` has been applied; dependency audit findings require a separate review.
+`npm run lint` currently reports 12 errors and 12 warnings in several editor, viewer, and configuration components. The AppLayout hook order, LiveKit token lifecycle, and viewer resource cleanup have been corrected, while the remaining findings are recorded as later quality-hardening work.
+
+`npm audit` currently reports 11 dependency findings: 1 low, 1 moderate, and 9 high. No automatic audit fix has been applied because dependency upgrades require a separate compatibility review.
 
 ## Public limitations
 
@@ -90,4 +92,4 @@ This console is intended to connect to two separate components in the broader in
 - a camera bridge that publishes Lucid camera frames through LiveKit
 - a wafer runtime that manages sessions, inspection state, results, and report export
 
-Curated local snapshots of both components are under review. They should not be linked from a public overview repository until Windows integration testing, disclosure review, and clean-history preparation are complete.
+Clean local snapshots of both components have been prepared. Public cross-repository links and an overview repository remain pending disclosure review and Windows integration testing.
