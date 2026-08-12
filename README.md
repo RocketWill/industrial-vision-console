@@ -30,6 +30,10 @@ The console is designed as an operator-oriented engineering tool. It is not a cl
 
 The live workspace combines the incoming video track with ROI overlays, session state, motion indicators, and runtime diagnostics returned by the backend. Camera identifiers used for routing remain visible, while device-specific serial, network, and local-path details are covered in the public screenshot. The generic camera frame is included only to demonstrate stream and overlay behavior.
 
+![History view showing defect results from a simulated wafer run](docs/images/simulated-result-history.png)
+
+The history workspace reads inspection, defect, and final-result records through the runtime API and keeps filtering, pagination, and export actions in the operator console. The displayed rows were generated with simulated wafer input for integration testing; they are not customer or production records. Physical-device and workstation details remain covered.
+
 ## Architecture
 
 ```text
