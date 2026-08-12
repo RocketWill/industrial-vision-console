@@ -30,9 +30,25 @@ The console is designed as an operator-oriented engineering tool. It is not a cl
 
 The live workspace combines the incoming video track with ROI overlays, session state, motion indicators, and runtime diagnostics returned by the backend. Camera identifiers used for routing remain visible, while device-specific serial, network, and local-path details are covered in the public screenshot. The generic camera frame is included only to demonstrate stream and overlay behavior.
 
+![Wafer and fork regions configured against a simulated frame](docs/images/roi-configuration.png)
+
+The configuration workspace stores wafer and fork regions in image coordinates and previews both shapes before they are applied by the runtime. This frame comes from a simulated wafer run; device identifiers and workstation paths are covered.
+
+![Saved template and alignment preview for a simulated wafer run](docs/images/template-configuration.png)
+
+Template configuration keeps the saved crop, reference points, and annotated preview together so an operator can inspect the active alignment input before starting a run. The public screenshot shows simulated input rather than a customer recipe or production configuration.
+
+![Inspection records from a simulated wafer run](docs/images/simulated-inspection-history.png)
+
+Inspection history exposes per-pass alignment, reference-point, defect, and score fields with filtering, pagination, and spreadsheet export. The rows shown here were generated during simulated integration testing.
+
 ![History view showing defect results from a simulated wafer run](docs/images/simulated-result-history.png)
 
-The history workspace reads inspection, defect, and final-result records through the runtime API and keeps filtering, pagination, and export actions in the operator console. The displayed rows were generated with simulated wafer input for integration testing; they are not customer or production records. Physical-device and workstation details remain covered.
+The defect view provides a separate record of processing status, classified result, severity, and measured area fields. It reads the runtime API rather than recomputing results in the frontend.
+
+![Final wafer-level results from a simulated run](docs/images/simulated-final-history.png)
+
+Final history aggregates the available inspection records into a wafer-level outcome while retaining the alignment and reference-point state used by the runtime. All history screenshots contain simulated records, not customer or production data; physical-device and workstation details remain covered.
 
 ## Architecture
 
