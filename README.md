@@ -24,6 +24,12 @@ The original system was developed as part of a larger camera, LiveKit, and wafer
 
 The console is designed as an operator-oriented engineering tool. It is not a cloud SaaS application and does not include a public camera publisher or wafer runtime backend.
 
+## Interface
+
+![Operator console with a connected LiveKit stream, ROI overlays, and runtime status](docs/images/live-runtime-view.png)
+
+The live workspace combines the incoming video track with ROI overlays, session state, motion indicators, and runtime diagnostics returned by the backend. Camera identifiers used for routing remain visible, while device-specific serial, network, and local-path details are covered in the public screenshot. The generic camera frame is included only to demonstrate stream and overlay behavior.
+
 ## Architecture
 
 ```text
