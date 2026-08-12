@@ -109,13 +109,13 @@ npm run build
 - A wafer-runtime backend is not included.
 - Production images, wafer identifiers, recipes, camera serials, and customer configuration are not included.
 - The public snapshot uses a curated history rather than the original internal development history.
-- No open-source license is attached while ownership and disclosure review is in progress.
+- No project license is attached. Publication of the source does not grant permission for reuse, redistribution, or commercial deployment.
 
 ## Related system components
 
-This console is intended to connect to two separate components in the broader industrial vision system:
+The console sits on the operator-facing side of a larger workflow. The related public repositories cover the services it connects to and the separate browser-side tuning path:
 
-- a camera bridge that publishes Lucid camera frames through LiveKit
-- a wafer runtime that manages sessions, inspection state, results, and report export
-
-Clean local snapshots of both components have been prepared. Public cross-repository links and an overview repository remain pending disclosure review and Windows integration testing.
+- [Industrial Vision System Reference](https://github.com/RocketWill/industrial-vision-system-reference) — component map and integration boundaries
+- [Lucid LiveKit Bridge](https://github.com/RocketWill/lucid-livekit-bridge) — camera and replay publication through LiveKit
+- [Wafer Runtime Reference](https://github.com/RocketWill/wafer-runtime-reference) — inspection sessions, runtime state, and result APIs
+- [Industrial Vision Workbench](https://github.com/RocketWill/industrial-vision-workbench) — browser-side stream inspection and OpenCV.js tuning
